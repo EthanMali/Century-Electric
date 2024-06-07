@@ -99,7 +99,9 @@ body {
     width: 100%; /* Ensure image fills container */
     display: block; /* Remove extra space under the image */
     border-radius: 20px;
-    height: 600px
+    height: 600px;
+
+
 
 }
 .container {

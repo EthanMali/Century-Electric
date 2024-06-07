@@ -13,6 +13,13 @@
   font-weight:400;
   font-style: normal;
 }
+.font2 {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: xx-large;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
 /*================================================================================= Start of Menu Bar ======================================================================*/
 body {
     margin: 0;
@@ -126,11 +133,10 @@ body {
 
 .centered-text {
     text-align: center; /* Horizontally center text */
-    font-size: 35px; /* Adjust font size as needed */
     font-weight: normal
 }
 
-/*========== Who We Are ==========*/
+/*====================================== Who We Are =====================================*/
 
 .container {
     display: flex;
@@ -142,6 +148,132 @@ body {
 .text {
     flex: 1; /* Take up remaining space */
     margin-right: 20px; /* Add spacing between text and image */
-    line-height: 2
+    line-height: 2;
+    font-size: large;
+    margin-left: 30px
 }
+
+.image {
+    flex: 1; /* Take up remaining space */
+}
+
+.image img {
+    width: 100%; /* Ensure image fills container */
+    display: block; /* Remove extra space under the image */
+
+}
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex; /* Align items to the top */ 
+    padding: 20px;
+} 
+.text {
+    flex: 1; /* Take up remaining space */
+    margin-right: 20px; /* Add spacing between text and image */
+}
+.rounded-image {
+    border-radius: 20px; /* Adjust the value to change the roundness */
+    overflow: hidden; /* Ensure the rounded corners are visible */
+}
+
+/* ==============  Page up element ==============*/
+
+.page-up-btn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    background-color: #000000;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.page-up-btn:hover {
+    background-color: #555555;
+}
+
+.centered-text {
+    text-align: center; /* Horizontally center text */
+    font-size: 35px; /* Adjust font size as needed */
+    font-weight: lighter 
+}
+
+/* ------------------------------------------------flip card ---------------------------------------------------------*/
+
+.flip-card {
+    background-color: transparent;
+    width: calc(25% - 20px); 
+    height: 500px;
+    perspective: 1000px; 
+    margin: 70px; 
+    float:left;
+    border-radius: 10px;
+  }
+  
+  
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg); 
+  }
+  
+  .flip-card-front,
+  .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    z-index: auto;
+  }
+  
+  .flip-card-front {
+    background-color: #bbb;
+    color: black;
+    position: relative;
+  }
+  .flip-card-front h2 {
+    position: absolute;
+    top: 10px;
+    left: 50%; 
+    transform: translateX(-50%); 
+    z-index: 5; 
+  }
+
+  
+  .flip-card-back {
+    background-color: #bbb;
+    color: white;
+    transform: rotateY(180deg);
+  }
+
+
+.flip-card-front img,
+.flip-card-back img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.7;
+  border-radius: 10px;
+}
+
+.flip-card-front img {
+    width: 100%;
+    height: calc(100% - 20px); 
+    object-fit: cover;
+  }
+
 
